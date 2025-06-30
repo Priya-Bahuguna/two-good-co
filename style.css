@@ -1,0 +1,344 @@
+@font-face {
+    font-family: Futura;
+    src: url(./Futura-Bold.ttf);
+}
+@font-face {
+    font-family: Gilroy;
+    src: url(./Gilroy-Medium.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+
+*::selection {
+    color: #fff;
+    background-color: #000;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #F7F7F7;
+}
+
+/* ---------------------- NAV ---------------------- */
+#nav {
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+#nav #nav-part2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+#links {
+    padding: 10px;
+}
+
+#nav-part1 {
+    height: 82px;
+    overflow: hidden;
+}
+
+#nav-part1 svg {
+    display: block;
+}
+
+#nav-part2 #links a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0 20px;
+}
+
+#icons {
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #F7F7F7;
+}
+
+#nav-part2 #icons i {
+    font-size: 18px;
+    margin: 0 20px;
+    font-weight: 100;
+}
+
+/* ---------------------- CURSOR ---------------------- */
+#cursor {
+    height: 180px;
+    width: 180px;
+    background-color: rgba(224, 139, 189, 0.814);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+/* ---------------------- PAGE 1 ---------------------- */
+#page1 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 0 1vw;
+    padding-top: 20vh;
+}
+
+#page1 h1 {
+    font-size: 11.4vw;
+    text-transform: uppercase;
+    font-family: futura;
+    line-height: 10vw;
+    letter-spacing: -8px;
+}
+
+#video-container {
+    height: 100vh;
+    width: 100%;
+    background-color: grey;
+    margin-top: 1vw;
+    position: relative;
+}
+
+#video-container video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#video-container #play {
+    padding: 3vw 2.2vw;
+    background-color: black;
+    color: #fff;
+    font-size: 1.3vw;
+    position: fixed;
+    text-transform: uppercase;
+    font-family: futura;
+    border-radius: 50%;
+    opacity: 0;
+    scale: 0;
+}
+
+/* ---------------------- PAGE 2 ---------------------- */
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 3vw 1vw;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#page2 .elem {
+    height: 100%;
+    width: 31%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#page2 .elem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+#page2 .elem .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 0 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+#page2 .elem:hover img {
+    transform: scale(1.05);
+}
+
+#page2 .elem:hover .overlay,
+#page2 .elem.active .overlay {
+    max-height: 200px;
+    padding: 10px;
+}
+
+#page2 .overlay h4 {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#page2 .overlay p {
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+/* ---------------------- PAGE 3 ---------------------- */
+#page3 {
+    min-height: 120vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 60px;
+}
+
+.page3-intro {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page3-intro h2 {
+    font-size: 2.5vw;
+    font-family: 'Futura';
+    margin-bottom: 1vw;
+}
+
+.page3-intro p {
+    font-size: 1.1vw;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.child {
+    height: auto;
+    width: 38vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4vw;
+}
+
+.child img {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+}
+
+.price-tag {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.product-description {
+    font-size: 0.95rem;
+    text-align: center;
+    padding: 0 1vw;
+    margin-top: 8px;
+    color: #444;
+}
+
+#page4, #page5, #page6 {
+    padding: 6vw 12vw;
+    background-color: #fdfdfd;
+    text-align: center;
+}
+
+#page4 h2, #page5 h2, #page6 h2 {
+    font-size: 2.3rem;
+    font-family: 'Futura';
+    color: #222;
+    margin-bottom: 1rem;
+}
+
+#page4 p, #page5 p, #page6 p {
+    font-size: 1.05rem;
+    color: #444;
+    line-height: 1.7;
+    max-width: 850px;
+    margin: auto;
+}
+
+
+/* ---------------------- RESPONSIVE ---------------------- */
+@media (max-width:600px) {
+    #nav {
+        padding: 15px;
+    }
+
+    #links {
+        display: none;
+    }
+
+    #nav-part1 {
+        height: 67px;
+    }
+
+    #nav-part1 svg {
+        height: 67px;
+        width: 80px;
+    }
+
+    #page1 h1 {
+        font-size: 15.5vw;
+        letter-spacing: -3px;
+    }
+
+    #video-container {
+        height: 25vh;
+        margin-top: 3vw;
+    }
+
+    #video-container #play {
+        padding: 9.5vw 7.2vw;
+        font-size: 4.5vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        opacity: 1;
+        scale: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    #page2 {
+        flex-direction: column;
+        padding: 5vw 3vw;
+    }
+
+    #page2 .elem {
+        width: 100%;
+        margin-bottom: 3vw;
+    }
+
+    .child {
+        width: 88vw;
+        padding: 15vw;
+    }
+
+    .page3-intro h2 {
+        font-size: 6vw;
+    }
+
+    .page3-intro p {
+        font-size: 4vw;
+    }
+}
