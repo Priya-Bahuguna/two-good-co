@@ -40,8 +40,8 @@ This is a visually-rich, interactive clone of the [Two Good Co.](https://twogood
 - HTML5
 - CSS3 (custom fonts: Futura, Gilroy)
 - JavaScript (Vanilla)
-- GSAP for animations
-- Locomotive Scroll for smooth scrolling
+- [GSAP](https://greensock.com/gsap/) for animations
+- [Locomotive Scroll](https://github.com/locomotivemtl/locomotive-scroll)
 - Google Fonts and RemixIcon for styling
 
 ## 📦 Requirements
@@ -49,35 +49,11 @@ This is a visually-rich, interactive clone of the [Two Good Co.](https://twogood
 - Modern browser (Chrome, Firefox, Safari)
 - Internet connection (for CDN assets like GSAP, fonts)
 
-## 🧠 How to Use
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Priya-Bahuguna/two-good-co.git
-   cd two-good-co
-   ```
+## 🙌 Acknowledgments
 
-2. (Optional) If using Git LFS for large video:
-   ```bash
-   git lfs install
-   git lfs pull
-   ```
-
-3. Open `index.html` in your browser.
-
-## 🎥 Video Integration Notes
-
-If you want to use your own `.mp4` video, place it in the root folder and update this tag in `index.html`:
-
-```html
-<video autoplay muted loop playsinline>
-  <source src="video.mp4" type="video/mp4">
-</video>
-```
-
-## 📄 License
-
-This is a personal educational project and is **not** affiliated with or endorsed by [Two Good Co.](https://twogood.com.au). For inspiration and learning purposes only.
+This project is built as an educational clone and is not affiliated with or endorsed by Two Good Co.
 
 ---
+
 
